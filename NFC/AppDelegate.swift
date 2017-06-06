@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreNFC
-import CoreBluetooth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, NFCNDEFReaderSessionDelegate {
