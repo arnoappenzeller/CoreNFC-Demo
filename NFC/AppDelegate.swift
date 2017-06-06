@@ -16,10 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NFCNDEFReaderSessionDeleg
     var session: NFCNDEFReaderSession?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.global(qos: .background), invalidateAfterFirstRead: false)
-            self.session?.begin()
-        }
+		self.session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.global(qos: .background), invalidateAfterFirstRead: false)
+		self.session?.begin()
         return true
     }
 
